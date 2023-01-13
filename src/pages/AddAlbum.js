@@ -32,9 +32,7 @@ function AddAlbum() {
     async function createNewAlbum(e) {
         e.preventDefault();
         const response = await addAlbum(id, userId, title);
-        console.log(response);
         if (response.success) {
-            console.log("res after success", response.data);
             let newAlbum = response.data;
             albumsFromState.addAlbumToState(newAlbum); // add the new album to the album context
             toggleAddAlbumSuccess(); // show the added succesfully toast

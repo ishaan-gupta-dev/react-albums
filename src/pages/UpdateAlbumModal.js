@@ -43,7 +43,6 @@ function UpdateAlbumModal(props) {
     // update album api call
     async function updateAlbumFunc() {
         const response = await updateAlbum(albumId, id, userId, title);
-        console.log(response);
         if (response.success) {
             let updatedAlbums = albums.filter((album) => {
                 return album.id != albumId;

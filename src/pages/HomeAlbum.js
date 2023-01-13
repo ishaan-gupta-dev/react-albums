@@ -35,7 +35,6 @@ function HomeAlbum() {
     useEffect(() => {
         const fetchAllAlbums = async () => {
             const response = await getAllAlbums();
-            // console.log(response);
             if (response.success) {
                 setAlbums(response.data);
             }
@@ -55,7 +54,6 @@ function HomeAlbum() {
 
     // delete an album
     async function deleteAlbumFunc(album_id) {
-        console.log(album_id);
         const response = await deleteAlbum(album_id);
         if (response.success) {
             let updatedAlbums = albums.filter((album) => album.id !== album_id);

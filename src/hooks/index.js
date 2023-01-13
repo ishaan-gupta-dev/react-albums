@@ -8,16 +8,13 @@ export const useAlbums = () => {
 }
 
 export const useProvideAlbums = () => {
-    // console.log("inside use provide albums");
     const [albums, setAlbums] = useState(null);
     const [loading, setLoading] = useState(true);
 
 
     useEffect(() => {
-        // console.log("inside use effect");
         const fetchAllAlbums = async () => {
             const response = await getAllAlbums();
-            // console.log('response', response);
             if (response.success) {
                 setAlbums(response.data);
             }
