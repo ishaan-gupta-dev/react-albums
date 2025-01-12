@@ -19,7 +19,7 @@ npm run deploy
 
 Hosted on
 
-https://ishaan-gupta-developer.github.io/react-albums/
+https://ishaan-gupta-dev.github.io/react-albums/
 
 ## API Reference
 
